@@ -1,6 +1,15 @@
+#端口配置
+server: 8090
+
 spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    name: joke
+    url: jdbc:mysql://192.168.101.4:3306/joke
+    username: root
+    password: root
   redis:
-    host: 127.0.0.1
+    host: 192.168.101.4
     password: 111111
     port: 6379
     pool:
@@ -8,3 +17,4 @@ spring:
       min-idle: 1
       max-active: 1000
       max-wait: -1
+    timeout: 500

@@ -1,9 +1,12 @@
 package com.study.example;
 
 import com.study.example.Controller.User;
+import com.study.example.Utils.RedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -13,6 +16,12 @@ import java.util.Optional;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ExampleApplicationTests {
+
+	@Autowired
+	StringRedisTemplate redisTemplate;
+
+	@Autowired
+	RedisUtil redisUtil;
 
 	@Test
 	public void contextLoads() {
@@ -57,6 +66,19 @@ public class ExampleApplicationTests {
 		//user.setAddress("a");
 		//user.setUserName("b");
 		createUser(user);
+	}
+
+
+
+
+
+
+	@Test
+	public void test(){
+       //redisTemplate.opsForValue().set("4","444");
+		//redisUtil.del("4","3");
+		redisUtil.set("2","222");
+		System.err.println("success");
 	}
 
 }
