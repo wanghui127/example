@@ -23,7 +23,7 @@ public class ExampleApplicationTests {
 	@Autowired
 	RedisUtil redisUtil;
 
-	@Test
+	/*@Test
 	public void contextLoads() {
 		User user = null;
          Optional.ofNullable(user).map(user1 -> user.getUserName()).orElse("unknown");
@@ -66,7 +66,7 @@ public class ExampleApplicationTests {
 		//user.setAddress("a");
 		//user.setUserName("b");
 		createUser(user);
-	}
+	}*/
 
 
 
@@ -75,7 +75,7 @@ public class ExampleApplicationTests {
 
 	@Test
 	public void test(){
-       //redisTemplate.opsForValue().set("4","444");
+       redisTemplate.opsForValue().set("4","444");
 		//redisUtil.del("4","3");
 		redisUtil.set("2","222");
 		System.err.println("success");

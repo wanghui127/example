@@ -11,6 +11,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import javax.annotation.Resource;
+
 /**
  * Redis工具类
  *
@@ -20,7 +22,7 @@ import org.springframework.util.CollectionUtils;
 @Component
 public final class RedisUtil {
 
-    @Autowired
+    @Resource
     private RedisTemplate<String, Object> redisTemplate;
     // =============================common============================
 

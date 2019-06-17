@@ -1,20 +1,37 @@
-#端口配置
-server: 8090
-
-spring:
-  datasource:
+datasource:
     driver-class-name: com.mysql.jdbc.Driver
     name: joke
     url: jdbc:mysql://192.168.101.4:3306/joke
     username: root
     password: root
+#----------------------     WEB容器配置        -----------------------
+server:
+  port: 8080 #端口
+  servlet:
+    context-path: /example #路径上下文
+    jsp:
+      init-parameters: #jsp支持热部署
+        development: true
+#----------------------     SPRING配置        -----------------------
+spring:
+  profiles:
+    active: dev #dev 为开发环境，上线时把此项属性注释掉,切记
+  application:
+    name: 特殊病审批平台 #系统名称
+  servlet:
+    multipart:
+      max-file-size: 1024
+      max-request-size: 1024
+  devtools:
+    restart:
+      enabled: true #启用热启动
   redis:
-    host: 192.168.101.4
-    password: 111111
-    port: 6379
-    pool:
-      max-idle: 100
-      min-idle: 1
-      max-active: 1000
-      max-wait: -1
-    timeout: 500
+      host: 192.168.101.4
+      #password:
+      port: 6379
+      pool:
+        max-idle: 100
+        min-idle: 10
+        max-active: 1000
+        max-wait: 10000
+      timeout: 5000
