@@ -1,4 +1,4 @@
-package com.study.example.controller;
+package com.study.example.entity.user;
 
 /**
  * @program: example
@@ -43,7 +43,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "user{" +
                 "Id=" + Id +
                 ", userName='" + userName + '\'' +
                 ", address='" + address + '\'' +

@@ -21,7 +21,7 @@ public class ExampleApplicationTests {
 
 	/*@Test
 	public void contextLoads() {
-		User user = null;
+		user user = null;
          Optional.ofNullable(user).map(user1 -> user.getUserName()).orElse("unknown");
 
 		System.err.println(user.getUserName());
@@ -46,18 +46,18 @@ public class ExampleApplicationTests {
 	}
 
 
-	public void createUser(User user){
+	public void createUser(user user){
 
-		Optional<User> user1 = Optional.ofNullable(user);
+		Optional<user> user1 = Optional.ofNullable(user);
 		//user1.orElseGet(user);
-		User aa = user1.orElse(new User());
+		user aa = user1.orElse(new user());
 		System.err.println(aa);
 
 	}
 
 	@Test
 	public void optional(){
-		User user = new User();
+		user user = new user();
 		//user.setId(2);
 		//user.setAddress("a");
 		//user.setUserName("b");
@@ -75,8 +75,7 @@ public class ExampleApplicationTests {
 		System.err.println("success");
 	}*/
 
-	@Autowired
-	//private Md5Code md5Code;
+
 	/**
 	 * MD5加盐测试
 	 */
@@ -84,8 +83,8 @@ public class ExampleApplicationTests {
 	public  void md5(){
 		//String password1 = Md5Code.generate("wanghui");
 		//271d3b07db1be0cc4d68e094c6b24f06314f766471d88c15
-		System.err.println("wanghui加密后:"+Md5Code.generate("wanghui"));
-		System.err.println(Md5Code.verify("wanghui",Md5Code.generate("wanghui")));
+		//System.err.println("wanghui加密后:"+Md5Code.generate("wanghui"));
+		//System.err.println(Md5Code.verify("wanghui",Md5Code.generate("wanghui")));
 
 	}
 

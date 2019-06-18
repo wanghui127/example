@@ -2,12 +2,14 @@ package com.study.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-public class ExampleApplication {
+@EnableTransactionManagement
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExampleApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

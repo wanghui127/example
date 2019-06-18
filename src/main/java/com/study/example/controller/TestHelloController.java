@@ -1,13 +1,19 @@
 package com.study.example.controller;
 
+import com.study.example.entity.joke.Joke;
+import com.study.example.service.joke.JokeService;
 import com.study.example.utils.JsonResult;
 import com.study.example.utils.JsonResultUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @program: example
@@ -18,6 +24,9 @@ import org.springframework.web.servlet.ModelAndView;
  **/
 @Controller
 public class TestHelloController  extends  JsonResultUtil{
+
+    @Resource
+    JokeService jokeService;
 
     /**
     * @Description:  springBoot启动测试
@@ -68,6 +77,9 @@ public class TestHelloController  extends  JsonResultUtil{
     @RequestMapping(value = "/index3")
     @ResponseBody
     public JsonResult index3(){
-        return this.successRender().message("jsonResult.succeed");
+        Map<String,String> params = new HashMap<>();
+        List<Joke> jokes = jokeService.selectPage(params);
+        System.err.println("jokes:"+jokes.size());
+        return this.successRender().message("jsonResult.succeed").add("jokes",jokes);
     }
 }
