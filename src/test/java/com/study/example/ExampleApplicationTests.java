@@ -1,3 +1,4 @@
+/*
 package com.study.example;
 
 import com.study.example.utils.Md5Code;
@@ -19,7 +20,8 @@ public class ExampleApplicationTests {
 	@Autowired
 	RedisUtil redisUtil;
 
-	/*@Test
+	*/
+/*@Test
 	public void contextLoads() {
 		user user = null;
          Optional.ofNullable(user).map(user1 -> user.getUserName()).orElse("unknown");
@@ -62,23 +64,30 @@ public class ExampleApplicationTests {
 		//user.setAddress("a");
 		//user.setUserName("b");
 		createUser(user);
-	}*/
+	}*//*
 
-	/**
+
+	*/
+/**
 	 * redis工具类测试
-	 */
-	/*@Test
+	 *//*
+
+	*/
+/*@Test
 	public void test(){
        //redisTemplate.opsForValue().set("4","444");
 		//redisUtil.del("4","3");
 		redisUtil.set("2",222);
 		System.err.println("success");
-	}*/
+	}*//*
 
 
-	/**
+
+	*/
+/**
 	 * MD5加盐测试
-	 */
+	 *//*
+
 	@Test
 	public  void md5(){
 		//String password1 = Md5Code.generate("wanghui");
@@ -89,3 +98,4 @@ public class ExampleApplicationTests {
 	}
 
 }
+*/
