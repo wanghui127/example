@@ -78,7 +78,16 @@
 		</dependency>
 
 
-	</dependencies>
+        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec
+         md5加盐时所需-->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.12</version>
+        </dependency>
+
+
+    </dependencies>
 
 	<build>
 		<plugins>

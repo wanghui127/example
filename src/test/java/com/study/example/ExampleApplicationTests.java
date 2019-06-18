@@ -1,5 +1,6 @@
 package com.study.example;
 
+import com.study.example.utils.Md5Code;
 import com.study.example.utils.RedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -63,17 +64,29 @@ public class ExampleApplicationTests {
 		createUser(user);
 	}*/
 
-
-
-
-
-
-	@Test
+	/**
+	 * redis工具类测试
+	 */
+	/*@Test
 	public void test(){
        //redisTemplate.opsForValue().set("4","444");
 		//redisUtil.del("4","3");
 		redisUtil.set("2",222);
 		System.err.println("success");
+	}*/
+
+	@Autowired
+	//private Md5Code md5Code;
+	/**
+	 * MD5加盐测试
+	 */
+	@Test
+	public  void md5(){
+		//String password1 = Md5Code.generate("wanghui");
+		//271d3b07db1be0cc4d68e094c6b24f06314f766471d88c15
+		System.err.println("wanghui加密后:"+Md5Code.generate("wanghui"));
+		System.err.println(Md5Code.verify("wanghui",Md5Code.generate("wanghui")));
+
 	}
 
 }
