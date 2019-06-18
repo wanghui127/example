@@ -1,4 +1,4 @@
-package com.study.example.Utils;
+package com.study.example.utils;
 
 import java.util.List;
 import java.util.Map;
@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
-
-import javax.annotation.Resource;
 
 /**
  * Redis工具类
