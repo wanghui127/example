@@ -75,9 +75,9 @@ public class ExampleApplicationTests {
 
 	@Test
 	public void test(){
-       redisTemplate.opsForValue().set("4","444");
+       //redisTemplate.opsForValue().set("4","444");
 		//redisUtil.del("4","3");
-		redisUtil.set("2","222");
+		redisUtil.set("2",222);
 		System.err.println("success");
 	}
 

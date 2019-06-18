@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 @Component
 public final class RedisUtil {
 
-    @Resource
+    @Autowired
     private RedisTemplate<String, Object> redisTemplate;
     // =============================common============================
 
